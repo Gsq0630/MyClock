@@ -37,6 +37,7 @@ class AddClockFragment : Fragment() {
           Clock(name = text.toString())
         )
       }
+      binding.etName.setText("")
       Toast.makeText(requireContext(), "${text}添加成功", Toast.LENGTH_SHORT).show()
     }
   }

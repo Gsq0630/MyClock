@@ -9,7 +9,7 @@ interface ClockDao {
     fun insertAll(vararg users: Clock)
 
     @Delete
-    fun delete(user: Clock)
+    fun delete(clock: Clock)
 
     @Query("SELECT * FROM clock")
     fun getAll(): List<Clock>

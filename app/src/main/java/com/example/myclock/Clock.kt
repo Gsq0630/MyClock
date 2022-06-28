@@ -2,6 +2,9 @@ package com.example.myclock
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.coroutines.*
+import kotlin.coroutines.CoroutineContext
+import kotlin.coroutines.EmptyCoroutineContext
 
 @Entity(tableName = "clock")
 data class Clock(
@@ -10,7 +13,7 @@ data class Clock(
     val name: String = "", //名字
     val content: String = "", // 内容
     val shouldDate: String = "",//需打卡日期
-    val state: Int = 0, //打卡状态
+    var state: Int = 0, //打卡状态
     val priority: Int = 1, //打卡优先级
     val timestamp: Long = System.currentTimeMillis(),//创建时间
     val habitId: Int = 1, //习惯id
