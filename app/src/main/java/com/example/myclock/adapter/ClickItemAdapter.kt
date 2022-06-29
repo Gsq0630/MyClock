@@ -9,6 +9,7 @@ import com.example.myclock.room.Clock
 import com.example.myclock.R
 import com.example.myclock.databinding.ItemClockBinding
 import com.example.myclock.ex.clipImage
+import kotlin.math.abs
 
 class ClickItemAdapter(val context: Context,
                        val click: (Clock) -> Unit,
@@ -55,9 +56,8 @@ class ClickItemAdapter(val context: Context,
             holder.binding.ivBg.alpha = 0.29f
             holder.binding.tvIcon.setTextColor(context.resources.getColor(R.color.color11))
         } else {
-            val code = clock.name.hashCode() % 10
+            val code = abs(clock.name.hashCode()) % 10
             Log.d("TAG", "onBindViewHolder: code = $code name = ${clock.name}")
-            val r = (0..10).random()
             holder.binding.ivBg.setBackgroundColor(context.resources.getColor(colors[code]))
             holder.binding.ivBg.alpha = 1f
             holder.binding.tvIcon.setTextColor(context.resources.getColor(R.color.white))
