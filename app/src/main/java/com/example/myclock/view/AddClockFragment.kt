@@ -8,12 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
-import com.example.myclock.Clock
-import com.example.myclock.DB
-import com.example.myclock.R
+import com.example.myclock.room.Clock
+import com.example.myclock.room.DB
 import com.example.myclock.databinding.FragmentAddClockBinding
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class AddClockFragment : Fragment() {

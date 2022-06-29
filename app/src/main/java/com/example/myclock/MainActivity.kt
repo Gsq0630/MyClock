@@ -2,10 +2,9 @@ package com.example.myclock
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myclock.adapter.ViewPagerAdapter
 import com.example.myclock.databinding.ActivityMainBinding
+import com.example.myclock.room.DB
 
 class MainActivity : AppCompatActivity() {
 

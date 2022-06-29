@@ -5,14 +5,19 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myclock.Clock
+import com.example.myclock.room.Clock
 import com.example.myclock.R
 import com.example.myclock.databinding.ItemClockBinding
+import com.example.myclock.ex.clipImage
 
 class ClickItemAdapter(val context: Context,
                        val click: (Clock) -> Unit,
                        val olngClick: (Clock) -> Unit
 ): RecyclerView.Adapter<ClickItemAdapter.ClockViewHolder>() {
+
+    companion object {
+        private const val TAG = "ClickItemAdapter"
+    }
 
     private var dataList: List<Clock>? = null
     private val colors = listOf(
@@ -36,7 +41,9 @@ class ClickItemAdapter(val context: Context,
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClockViewHolder {
-        return ClockViewHolder(ItemClockBinding.inflate(LayoutInflater.from(context), parent, false))
+        return ClockViewHolder(ItemClockBinding.inflate(LayoutInflater.from(context), parent, false)).apply {
+            clipImage(binding.ivBg, context.resources.getDimension(R.dimen.dimen_50dp))
+        }
     }
 
     override fun onBindViewHolder(holder: ClockViewHolder, position: Int) {
@@ -68,6 +75,7 @@ class ClickItemAdapter(val context: Context,
         return dataList?.size ?: 0
     }
 
-    class ClockViewHolder(val binding: ItemClockBinding) : RecyclerView.ViewHolder(binding.root)
+    class ClockViewHolder(val binding: ItemClockBinding) : RecyclerView.ViewHolder(binding.root) {
+    }
 
 }

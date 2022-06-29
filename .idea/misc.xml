@@ -6,6 +6,8 @@
         <entry key="..\:/AndroidStudioProjects/MyClock/app/src/main/res/layout/activity_main.xml" value="0.24739583333333334" />
         <entry key="..\:/AndroidStudioProjects/MyClock/app/src/main/res/layout/fragment_add_clock.xml" value="0.1358695652173913" />
         <entry key="..\:/AndroidStudioProjects/MyClock/app/src/main/res/layout/fragment_click.xml" value="0.22291666666666668" />
+        <entry key="..\:/AndroidStudioProjects/MyClock/app/src/main/res/layout/fragment_history.xml" value="0.19583333333333333" />
+        <entry key="..\:/AndroidStudioProjects/MyClock/app/src/main/res/layout/item_click_history.xml" value="0.19583333333333333" />
         <entry key="..\:/AndroidStudioProjects/MyClock/app/src/main/res/layout/item_clock.xml" value="0.24739583333333334" />
       </map>
     </option>

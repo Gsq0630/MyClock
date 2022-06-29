@@ -1,4 +1,4 @@
-package com.example.myclock
+package com.example.myclock.room
 
 import androidx.room.*
 
@@ -19,5 +19,11 @@ interface ClockDao {
 
     @Query("SELECT * FROM clock WHERE habitId = :habitId order by priority")
     fun getClockByHabitId(habitId: Int): List<Clock>
+
+    @Query("SELECT * FROM EXTEND_INFO WHERE id = 1 LIMIT 1")
+    fun getLastChange(): ExtendInfo?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertExt(vararg users: ExtendInfo)
 
 }
